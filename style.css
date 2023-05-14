@@ -1098,7 +1098,9 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2); }
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+  overflow-y: auto;
+  overflow-x: hidden; }
   @media (min-width: 1366px) {
     .modal__wrapper {
       padding-top: 0; } }
@@ -1217,7 +1219,9 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2); }
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+  overflow-y: auto;
+  overflow-x: hidden; }
   @media (min-width: 1366px) {
     .modal__wrapper {
       padding-top: 0; } }
