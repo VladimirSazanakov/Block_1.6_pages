@@ -29,7 +29,7 @@
   background-color: #f8f8f8;
   max-width: 1260px; }
 
-@media (min-width: 1260px) {
+@media (min-width: 1200px) {
   .page {
     display: flex;
     justify-content: center; } }
@@ -111,7 +111,7 @@
     margin-right: 20px;
     margin-left: 4px; } }
 
-@media (min-width: 1366px) {
+@media (min-width: 1200px) {
   .header {
     display: none; } }
 
@@ -149,7 +149,7 @@
     align-items: center;
     text-align: center;
     align-content: center; }
-    @media (min-width: 1366px) {
+    @media (min-width: 1200px) {
       .page-title__title-buttons {
         display: flex; } }
   .page-title__title-button {
@@ -218,7 +218,7 @@
     .slider {
       margin-left: 24px;
       margin-bottom: 32px; } }
-  @media (min-width: 1366px) {
+  @media (min-width: 1200px) {
     .slider {
       overflow: hidden;
       margin-left: 34px;
@@ -232,6 +232,7 @@
 .main-content {
   display: flex;
   margin: 0;
+  margin-bottom: 10px;
   padding: 0;
   flex-direction: column;
   align-items: flex-start; }
@@ -240,18 +241,31 @@
     padding: 16px;
     padding-top: 0; }
   .main-content__text {
+    position: relative;
     margin: 0;
     margin-bottom: 16px;
     font-size: 14px;
     max-height: 90px;
     color: #1b1c21;
     overflow: hidden;
-    transition: all 0.8s linear; }
+    transition: max-height 0.5s ease; }
+    .main-content__text::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      display: block;
+      margin: 0;
+      padding: 0;
+      height: 40px;
+      width: 100%;
+      background: linear-gradient(to top, #f8f8f8 0.04%, rgba(248, 248, 248, 0.0001) 100%); }
     @media (min-width: 768px) {
       .main-content__text {
         max-height: 160px; } }
     .main-content__text--show-all {
-      max-height: 1000px; }
+      max-height: 500px; }
+      .main-content__text--show-all::after {
+        display: none; }
   .main-content__more-btn {
     position: relative;
     background: none;
@@ -331,7 +345,8 @@
   margin: 0;
   padding: 0;
   background-color: #f8f8f8;
-  height: 234px; }
+  height: 200px;
+  /*234px*/ }
   .service-software__title {
     display: block;
     margin: 0;
@@ -661,7 +676,8 @@
   margin: 0;
   padding: 0;
   background-color: #f8f8f8;
-  height: 304px; }
+  height: 314px;
+  /*304px*/ }
   .service-price__title {
     display: block;
     margin: 0;
@@ -768,8 +784,8 @@
 
 .slider-price__get-kp {
   display: inline-block;
-  width: 208px;
-  text-align: left;
+  width: auto;
+  text-align: center;
   vertical-align: middle;
   text-decoration: none;
   font-size: 16px;
@@ -779,7 +795,8 @@
   color: #1b1c21; }
   @media (min-width: 768px) {
     .slider-price__get-kp {
-      width: 420px; } }
+      width: 420px;
+      text-align: left; } }
 
 .slider-price__arrow {
   position: relative;
@@ -791,13 +808,15 @@
 
 .slider-price__info {
   padding: 0 16px;
+  text-align: center;
   margin: 0;
-  width: 288px;
+  width: auto;
   margin-bottom: 40px; }
   @media (min-width: 768px) {
     .slider-price__info {
       padding: 0 24px;
       width: 421px;
+      text-align: left;
       margin-bottom: 47px; } }
   @media (min-width: 1440px) {
     .slider-price__info {
@@ -886,7 +905,7 @@
     margin-right: 16px;
     background-color: red;
     border-radius: 50%; }
-    @media (min-width: 1366px) {
+    @media (min-width: 1200px) {
       .mobile-header__cancel {
         display: none; } }
   .mobile-header__search {
@@ -903,7 +922,6 @@
   z-index: 8;
   position: fixed;
   display: flex;
-  /*display: none;*/
   flex-direction: column;
   top: 0;
   left: 0;
@@ -1025,13 +1043,13 @@
     visibility: visible;
     opacity: 1;
     transform: translateX(0); }
-  @media (max-width: 360px) {
+  @media (max-width: 390px) {
     .mobile-menu {
       width: 100%; } }
   @media (min-width: 768px) {
     .mobile-menu {
       width: 320px; } }
-  @media (min-width: 1366px) {
+  @media (min-width: 1200px) {
     .mobile-menu {
       position: relative;
       top: 0;
@@ -1137,6 +1155,7 @@
 .modal__input {
   width: auto;
   height: 48px;
+  min-height: 48px;
   font-family: 'TT Lakes';
   border: 1px solid #eaeaea;
   border-radius: 8px;
@@ -1258,6 +1277,7 @@
 .modal__input {
   width: auto;
   height: 48px;
+  min-height: 48px;
   font-family: 'TT Lakes';
   border: 1px solid #eaeaea;
   border-radius: 8px;
