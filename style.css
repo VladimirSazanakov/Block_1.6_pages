@@ -1165,6 +1165,7 @@
 .modal__textarea {
   width: auto;
   height: 118px;
+  min-height: 118px;
   resize: none;
   font-family: 'TT Lakes';
   border: 1px solid #eaeaea;
@@ -1287,6 +1288,7 @@
 .modal__textarea {
   width: auto;
   height: 118px;
+  min-height: 118px;
   resize: none;
   font-family: 'TT Lakes';
   border: 1px solid #eaeaea;
